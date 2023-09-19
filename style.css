@@ -57,6 +57,10 @@ h1{
     /* cursor: url('./icons8-finger-up-32.png'), default; */
 }
 
+nav .bar{
+    display: none;
+}
+
 .main{
     display: flex;
     justify-content: center;
@@ -113,6 +117,7 @@ h4{
 #img-box{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
     gap: 30px;
 
 }
@@ -186,15 +191,41 @@ h4{
     top: 90vh;
 }
 
+#contact{
+    margin-top: 80px;
+}
+
+.connect{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+
+
+
 @media screen and (max-width:450px) and (orientation:portrait){
     .navbar{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--white);
+        position: absolute;
+        z-index: 5;
+        right: 0;
+        top: 2px;
+        gap: 35px;
+        width: 70vw;
+        height: 100vh;
+        margin-right: 40px;
+        padding-top: 50px;
     }
     #skill .logo{
         display: flex;
         justify-content: center;
         gap: 10px;
-        height: 50px;
+        height: 60px;
     }
 
     .logo h4{
@@ -219,7 +250,7 @@ h4{
         border-radius: 8px;
         position: relative;
         overflow: hidden;
-        margin-left: 20px;
+        margin-left: 25px;
     }
     .preview img{
         max-width: 100%;
@@ -259,7 +290,50 @@ h4{
     .hide{
         opacity: 100%;
     }
+
+    .main h2{
+        font-size: 60px;
+        padding-left: 40px;
+    }
     
+    .main p{
+        font-size: 20px;
+        width: 70vw;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    #skill{
+        margin-top: 90px;
+        padding-top: 0px;
+    }
+
+    #project{
+        margin-top: 100px;
+        padding-top: 0px;
+    }
+
+    nav .bar{
+        display: inline;
+        margin-right: 50px;
+        position: relative;
+        z-index: 7;
+    }
+
+    .hide_menu{
+        display: none;
+    }
+    
+    .shadow{
+        position: relative;
+        z-index: 2;
+        filter: blur(10px);
+    }
+
+    .connect{
+        gap: 25px;
+        flex-wrap: wrap;
+    }
 }
 
 
